@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f5f7f3;
+  color: #25323b;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 3px solid #e6a86a;
+  outline-offset: 3px;
+}
+
+.app-shell {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 52px 0 28px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 34px;
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 8px;
+  color: #d27f44;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, serif;
+}
+
+h1 {
+  margin-bottom: 18px;
+  color: #1f3038;
+  font-size: clamp(2.8rem, 6vw, 5.1rem);
+  letter-spacing: -0.075em;
+  line-height: 0.95;
+}
+
+h2 {
+  margin-bottom: 0;
+  color: #24343c;
+  font-size: 1.45rem;
+}
+
+.hero-copy {
+  max-width: 540px;
+  margin-bottom: 0;
+  color: #718087;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.hero-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 112px;
+  height: 112px;
+  border-radius: 42% 58% 55% 45%;
+  background: #e7f0e8;
+  color: #47715d;
+  font-size: 3.5rem;
+  transform: rotate(8deg);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 255px 1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.sidebar,
+.discovery-panel,
+.history-section {
+  border: 1px solid #e8ece7;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 16px 45px rgba(61, 79, 67, 0.06);
+}
+
+.sidebar {
+  padding: 24px;
+}
+
+.discovery-panel {
+  min-width: 0;
+  padding: 30px;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.muted {
+  color: #819097;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.count-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #edf2ee;
+  color: #557064;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.ban-list {
+  min-height: 45px;
+  margin-top: 25px;
+}
+
+.empty-message {
+  margin: 0;
+  color: #9ba8aa;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.sidebar-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 30px;
+  padding: 13px;
+  border-radius: 14px;
+  background: #f5f8f5;
+}
+
+.sidebar-tip p {
+  margin: 0;
+  color: #74827d;
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.result-heading {
+  margin-bottom: 24px;
+}
+
+.discover-button {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 14px 17px;
+  border: 0;
+  border-radius: 12px;
+  background: #43705b;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.discover-button:hover {
+  background: #315944;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  padding: 35px;
+  border: 1px dashed #d9e4da;
+  border-radius: 17px;
+  background: #f8faf7;
+  text-align: center;
+}
+
+.empty-icon {
+  margin-bottom: 17px;
+  padding: 17px;
+  border-radius: 50%;
+  background: #e9f2e9;
+  font-size: 2.3rem;
+}
+
+.empty-state h3 {
+  margin-bottom: 9px;
+  color: #354941;
+  font-size: 1.35rem;
+}
+
+.empty-state p {
+  margin-bottom: 0;
+  color: #84918c;
+  font-size: 0.9rem;
+}
+
+.history-section {
+  margin-top: 22px;
+  padding: 24px 30px;
+}
+
+.history-note {
+  color: #89968e;
+  font-size: 0.8rem;
+}
+
+.history-empty {
+  margin-top: 22px;
+}
+
+@media (max-width: 850px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .app-shell {
+    width: min(100% - 24px, 1180px);
+    padding-top: 30px;
+  }
+
+  .hero {
+    align-items: flex-start;
+  }
+
+  .hero-badge {
+    display: none;
+  }
+
+  .discovery-panel {
+    padding: 20px;
+  }
+
+  .result-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .discover-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .history-section {
+    padding: 20px;
+  }
+}
