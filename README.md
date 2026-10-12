@@ -1,10 +1,10 @@
 # Web Development Project 4 — Puppy Dogs
 
-Submitted by: **Your Name Here**
+Submitted by: Gabriel Christian 
 
 This web app: **Discover random dog breeds with matching photos, learn about their attributes, and customize future discoveries with a ban list.**
 
-Time spent: **Fill in your total** hours spent in total
+Time spent: 4 hours
 
 ## Run locally
 
@@ -40,7 +40,5 @@ npm run build
 - [x] Loading indicator, network/error messages, and a clear-all-bans button.
 - [x] Pending requests are cancelled when preferences change to prevent stale results.
 - [x] Photo source and license attribution.
-
-Record with [ScreenToGif](https://www.screentogif.com/) on Windows, then insert the recording path or hosted link. No walkthrough has been recorded yet.
 
 
